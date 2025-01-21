@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.counter-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.counter-title {
+  font-size: 2.5rem;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+.counter-text {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.counter-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.counter-btn {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.counter-btn:active {
+  transform: scale(0.95);
+}
+
+.increment {
+  background: #28a745;
+  color: white;
+}
+
+.increment:hover {
+  background: #218838;
+}
+
+.decrement {
+  background: #dc3545;
+  color: white;
+}
+
+.decrement:hover {
+  background: #c82333;
+}
+
+.reset {
+  background: #6c757d;
+  color: white;
+}
+
+.reset:hover {
+  background: #5a6268;
+}
+
+.theme-container {
+  min-height: 100vh;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.theme-container.light {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.theme-container.dark {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.theme-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.theme-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.light .theme-btn {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dark .theme-btn {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.theme-btn:hover {
+  opacity: 0.9;
+}
+
+.theme-btn:active {
+  transform: scale(0.98);
+}

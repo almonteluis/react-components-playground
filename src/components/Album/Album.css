@@ -1,0 +1,140 @@
+.albums-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  background: #1a1a1a; /* Dark background for the container */
+}
+
+.album-card {
+  background: #2d2d2d; /* Darker card background */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.album-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.album-info {
+  padding: 1.5rem;
+}
+
+.album-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.album-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ffffff; /* Bright white for title */
+  font-weight: bold;
+}
+
+.release-year {
+  background: #4a4a4a; /* Darker gray for year badge */
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.artist-info {
+  display: flex;
+  gap: 1rem;
+  color: #b3b3b3; /* Light gray for artist info */
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.album-description {
+  color: #d1d1d1; /* Lighter gray for description */
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.tracklist {
+  margin-bottom: 1.5rem;
+  background: #363636; /* Slightly lighter background for tracklist */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.tracklist h3 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.tracks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #4a4a4a;
+  color: #b3b3b3;
+}
+
+.track:last-child {
+  border-bottom: none;
+}
+
+.track-duration {
+  color: #888888;
+}
+
+.awards-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.award {
+  background: #3a3a3a; /* Dark background for awards */
+  color: #ffd700; /* Gold color for awards */
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.classic-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(
+    45deg,
+    #ffd700,
+    #ffa500
+  ); /* Gold gradient for classic badge */
+  color: #000000;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Media queries remain the same */
+@media (max-width: 900px) {
+  .albums-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .albums-container {
+    grid-template-columns: 1fr;
+  }
+}
