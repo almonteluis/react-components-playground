@@ -50,6 +50,13 @@ export default function Home() {
         "Interactive shopping list with add/remove functionality and item counter",
       emoji: "🛒",
     },
+    {
+      name: "React Quiz App",
+      path: "projects/react/useState/quiz",
+      description:
+        "Interactive quiz application testing React knowledge with multiple-choice questions",
+      emoji: "📝",
+    },
   ];
 
   return (
