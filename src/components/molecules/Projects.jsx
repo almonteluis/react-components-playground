@@ -3,7 +3,6 @@ import { PortfolioProjects } from "@/api/getPortfolioProjects";
 export default function Projects() {
   return (
     <>
-      <h1>Projects component</h1>
       <section id="projects">
         <div className="space-y-12 w-full py-12">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">

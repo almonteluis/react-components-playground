@@ -5,7 +5,7 @@ import Experiences from "@/components/organisms/Experiences";
 export default function Main() {
   return (
     <>
-      <main className="flex flex-col min-h-[100dvh] space-y-10 md:mt-10">
+      <main className=" mx-auto w-full max-w-2xl flex flex-col min-h-[100dvh] space-y-10 md:mt-10">
         <Hero />
         <About />
         <Projects />
