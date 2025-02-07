@@ -14,7 +14,7 @@ export default function Hero() {
           <img
             className="aspect-square h-full w-full"
             alt="Luis Almonte"
-            src="/cdn-cgi/image/width=200/me.jpg"
+            src="/headshot.jpeg"
           />
         </span>
       </div>
