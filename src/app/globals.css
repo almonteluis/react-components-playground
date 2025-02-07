@@ -138,3 +138,7 @@ body {
 .theme-btn:active {
   transform: scale(0.98);
 }
+
+.card {
+  width: 340px;
+}
