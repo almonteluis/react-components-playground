@@ -6,7 +6,10 @@ import {
 } from "@remixicon/react";
 export default function Socials() {
   return (
-    <div className="flex justify-center gap-4 self-stretch">
+    <div
+      className="flex justify-center gap-4 self-stretch"
+      data-testid="socials"
+    >
       <div className="flex justify-center items-center gap-2 p-2 rounded">
         <a
           aria-label="Link to Sarah Dole Github Profile"
