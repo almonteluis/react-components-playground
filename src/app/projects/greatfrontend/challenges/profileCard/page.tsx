@@ -1,0 +1,45 @@
+"use client";
+import { Button } from "@/components/atoms/Button";
+import Socials from "@/components/molecules/Socials";
+import Image from "next/image";
+export default function ProfileCard() {
+  function handleButton() {
+    console.log("test");
+  }
+  return (
+    <main
+      role="main"
+      className="h-screen flex flex-col items-center bg-gradient-to-b from-gray-50 to-[#d2d6db] text-black py-[200px]"
+    >
+      <article className="w-[340px] flex flex-col gap-10 bg-white px-4 py-6 rounded-lg">
+        <div className="flex flex-col items-center gap-6 self-stretch">
+          <div className="w-16 h-16">
+            <Image
+              className="w-16 h-16 object-cover"
+              src="/profile.png"
+              width={64}
+              height={64}
+              alt="Sarah Dole Profile Photo"
+            ></Image>
+          </div>
+          <div className="flex flex-col justify-center items-center gap-1 self-stretch">
+            <span className="font-medium text-xl text-center text-neutral-900">
+              Sarah Dole
+            </span>
+            <span className="font-normal text-sm text-center text-neutral-600">
+              Front End Engineer @ Microsoft
+            </span>
+          </div>
+          <span className="font-normal text-base text-center text-neutral-600">
+            I turn coffee into bugs which are fixed by someone else. Certified
+            Stack Overflow and ChatGPT developer.
+          </span>
+        </div>
+        <div className="flex flex-col gap-6 self-stretch">
+          <Button title="Contact me" onClick={handleButton} />
+          <Socials />
+        </div>
+      </article>
+    </main>
+  );
+}

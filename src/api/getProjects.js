@@ -1,4 +1,4 @@
-export const getProducts = [
+export const getProjects = [
   {
     name: "Counter",
     path: "/counter",
@@ -52,5 +52,12 @@ export const getProducts = [
     description:
       "Interactive quiz application testing React knowledge with multiple-choice questions",
     emoji: "📝",
+  },
+  {
+    name: "Profile Card",
+    path: "projects/greatfrontend/challenges/profileCard",
+    description:
+      "develop a simple profile card that includes a profile picture, name, title, links to social media profiles, and a call-to-action (CTA) button.",
+    emoji: "👤",
   },
 ];

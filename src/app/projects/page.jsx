@@ -1,19 +1,19 @@
 import Link from "next/link";
-import { getProducts } from "@/api/getProjects";
+import { getProjects } from "@/api/getProjects";
 
 export default function Projects() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
+    <main className="min-h-screen">
       <div className="max-w-2xl mx-auto">
-        <h1 className="text-3xl font-bold text-gray-800 mb-8">
+        <h1 className="text-3xl font-bold text-white-800 mb-8">
           React Learning Journey
-          <span className="block text-lg font-normal text-gray-600 mt-2">
+          <span className="block text-lg font-normal text-white-600 mt-2">
             Projects I{`'`}ve built while learning React
           </span>
         </h1>
 
         <div className="grid gap-4">
-          {getProducts.map((project) => (
+          {getProjects.map((project) => (
             <Link
               key={project.path}
               href={project.path}
@@ -46,10 +46,10 @@ export default function Projects() {
             </Link>
           ))}
         </div>
-        <p className="mt-8 text-center text-gray-600">
+        <p className="mt-8 text-center text-white-600">
           More projects coming soon! 🚀
         </p>
       </div>
-    </div>
+    </main>
   );
 }

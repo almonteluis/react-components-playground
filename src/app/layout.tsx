@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${plusJakartaSans.variable} antialiased min-h-screen bg-background font-sans max-w-2xl mx-auto py-12 sm:py-24 px-6`}
+        className={` ${plusJakartaSans.variable} antialiased min-h-screen font-sans max-w-7xl mx-auto`}
       >
         {children}
       </body>

@@ -113,14 +113,14 @@ export default function JobCard(props) {
       <p className="description">{props.description}</p>
 
       {/* Responsibilities */}
-      <div className="responsibilities">
+      <section className="responsibilities">
         <h4>Key Responsibilities</h4>
         <ul className="responsibilities-list">
           {props.responsibilities.map((respond, i) => (
             <li key={i}>{respond}</li>
           ))}
         </ul>
-      </div>
+      </section>
 
       {/* Benefits */}
       <div className="benefits">
@@ -135,21 +135,21 @@ export default function JobCard(props) {
       </div>
 
       {/* Action Buttons */}
-      <div className="action-buttons">
+      <section className="action-buttons">
         <button className="save-button">Save Job</button>
         <a className="apply-button" href="#">
           Apply Now
         </a>
-      </div>
+      </section>
 
       {/* Job Meta Info with Deadline Indicator */}
-      <div className="job-meta">
+      <section className="job-meta">
         <span>
           <span className="deadline-indicator"></span>
           Posted: {formatDate(props.postedDate)}
         </span>
         <span>Apply by: {formatDate(props.applicationDeadline)}</span>
-      </div>
+      </section>
     </div>
   );
 }

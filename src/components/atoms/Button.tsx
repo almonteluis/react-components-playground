@@ -2,16 +2,20 @@ import React from "react";
 
 interface ButtonProps {
   title: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export const Button = (button: ButtonProps) => {
   return (
-    <button
-      className="py-2 px-3 bg-indigo-500 hover:bg-indigo-600 text-white text-xl font-semibold rounded-md shadow focus:outline-none w-24"
-      onClick={button.onClick}
-    >
-      {button.title}
-    </button>
+    <div className="flex justify-center items-center gap-1.5 self-stretch bg-indigo-700 px-4 py-2.5 rounded">
+      <div className="flex justify-center items-center px-0.5">
+        <button
+          className="font-medium text-base text-white"
+          onClick={button.onClick}
+        >
+          {button.title}
+        </button>
+      </div>
+    </div>
   );
 };
