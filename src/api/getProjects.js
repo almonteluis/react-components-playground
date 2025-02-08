@@ -1,5 +1,12 @@
 export const getProjects = [
   {
+    name: "Chef Claude",
+    path: "https://chef-claude-xv3b.vercel.app/",
+    description:
+      "Chef Claude is an app where you input your ingredients and it creates a meal from it",
+    emoji: "🧑🏽‍🍳",
+  },
+  {
     name: "Assembly Endgame",
     path: "https://assembly-endgame-fpuqljz3r-almonteluis-projects.vercel.app/",
     description:
