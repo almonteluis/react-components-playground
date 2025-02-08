@@ -7,6 +7,12 @@ export const getProjects = [
     emoji: "👾",
   },
   {
+    name: "Tenzies",
+    path: "https://tenzies-sepia.vercel.app/",
+    description: "A simple game of Tenzies",
+    emoji: "🎲",
+  },
+  {
     name: "Counter",
     path: "/counter",
     description:
