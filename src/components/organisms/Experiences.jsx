@@ -23,14 +23,13 @@ export default function Experiences() {
         <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
           {getExperiences.experience.map((experience, i) => (
             <div key={i}>
-              {console.log(experience)}
               <li className="relative ml-10 py-4">
                 <div className="absolute -left-16 top-2 flex items-center justify-center bg-white rounded-full">
                   <span className="relative flex shrink-0 overflow-hidden rounded-full border size-12 m-auto">
                     <Image
                       className="aspect-square h-full w-full object-contain"
                       alt="System environment variables leak"
-                      src="/google.png"
+                      src={experience.image}
                       width={40}
                       height={40}
                     />
@@ -43,35 +42,11 @@ export default function Experiences() {
                   <h2 className="font-semibold leading-none">
                     {experience.title}
                   </h2>
-                  <span className="prose dark:prose-invert text-sm text-muted-foreground">
-                    {experience.achievements}
-                  </span>
-                </div>
-                <div className="mt-2 flex flex-row flex-wrap items-start gap-2">
-                  <a
-                    target="_blank"
-                    rel="noopener nofollow"
-                    href="https://github.com/Puliczek/CVE-2022-0337-PoC-Google-Chrome-Microsoft-Edge-Opera"
-                  >
-                    <div className="items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80 flex gap-2">
-                      <GithubIcon />
-                      Write-up
-                    </div>
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener nofollow"
-                    href="https://chromereleases.googleblog.com/2022/01/stable-channel-update-for-desktop.html"
-                  ></a>
-                  <div
-                    className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground ml-auto"
-                    title="Reward amount"
-                  >
-                    Reward: $ 10,000
-                  </div>
-                  <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80">
-                    HIGH
-                  </div>
+                  <ul className="prose dark:prose-invert text-sm text-muted-foreground">
+                    {experience.achievements.map((achievement, i) => (
+                      <li key={i}>{achievement}</li>
+                    ))}
+                  </ul>
                 </div>
               </li>
             </div>

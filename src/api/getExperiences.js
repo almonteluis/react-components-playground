@@ -15,6 +15,7 @@ export const getExperiences = {
       company: "Collette Travel",
       location: "Rhode Island",
       period: "October 2022 - Present",
+      image: "/volum8.jpeg",
       achievements: [
         "Directed frontend team of 4 engineers on booking engine redesign, accelerated development cycles by 35% through React component standardization and automated testing framework achieving 90% coverage.",
         "Built modular Sitecore component library with 20+ reusable elements, decreasing duplicate code by 45% and accelerating sprint velocity by 35%.",
@@ -29,6 +30,7 @@ export const getExperiences = {
       company: "Thinkware",
       location: "Ohio",
       period: "October 2020 - September 2022",
+      image: "/volum8.jpeg",
       achievements: [
         "Built Vue.js dashboard processing payroll for 5,000+ employees, cutting transaction times by 40% for 12 organizations.",
         "Created 20+ Vue.js components with REST API integration, maintaining 99.9% uptime and accelerating feature delivery by 50%.",
@@ -42,6 +44,7 @@ export const getExperiences = {
       company: "iMedia",
       location: "Boonton, NJ",
       period: "August 2018 - June 2020",
+      image: "/volum8.jpeg",
       achievements: [
         "Built full-stack web applications for 20+ clients with 15 payment integrations, cutting transaction times by 40% at 99.9% uptime.",
         "Connected frontend-backend systems processing 1M+ daily API requests, reducing data sync errors by 85% through error boundary implementation.",
@@ -55,6 +58,7 @@ export const getExperiences = {
       company: "Volum8",
       location: "Montgomery, NY",
       period: "January 2015 - January 2018",
+      image: "/volum8.jpeg",
       achievements: [
         "Upgraded 30+ web properties to WCAG 2.1 AA standards, raising accessibility scores from 72% to 98% and cutting user complaints by 85%.",
         "Automated backup systems for 50+ domains maintaining 99.99% uptime, reducing recovery time from 4 hours to 30 minutes.",
