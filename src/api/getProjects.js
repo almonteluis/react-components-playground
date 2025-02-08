@@ -1,5 +1,12 @@
 export const getProjects = [
   {
+    name: "Assembly Endgame",
+    path: "https://assembly-endgame-fpuqljz3r-almonteluis-projects.vercel.app/",
+    description:
+      "A simple game where you have a set number of guess to correctly guess the correct word",
+    emoji: "👾",
+  },
+  {
     name: "Counter",
     path: "/counter",
     description:
