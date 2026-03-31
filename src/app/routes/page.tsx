@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Navigation from "@/components/Navigation";
 
 interface Route {
   path: string;
@@ -56,48 +57,51 @@ const routes: Route[] = [
 
 export default function RoutesPage() {
   return (
-    <main className="min-h-screen bg-gray-900 text-white p-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-2">Site Routes</h1>
-        <p className="text-gray-400 mb-8">
-          All available pages in this application
-        </p>
+    <div className="min-h-screen bg-[#080808] text-[#f5f4ef]">
+      <Navigation />
+      <main className="pt-24 px-6 pb-16">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold mb-2">Site Routes</h1>
+          <p className="text-[#f5f4ef]/60 mb-8">
+            All available pages in this application
+          </p>
 
-        <div className="grid gap-4">
-          {routes.map((route) => (
-            <Link
-              key={route.path}
-              href={route.path}
-              className="block p-6 bg-gray-800 rounded-lg border border-gray-700 hover:border-blue-500 hover:bg-gray-750 transition-all group"
-            >
-              <div className="flex items-center justify-between">
-                <div>
-                  <h2 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
-                    {route.label}
-                  </h2>
-                  {route.description && (
-                    <p className="text-gray-400 mt-1 text-sm">
-                      {route.description}
-                    </p>
-                  )}
+          <div className="grid gap-4">
+            {routes.map((route) => (
+              <Link
+                key={route.path}
+                href={route.path}
+                className="block p-6 bg-[#f5f4ef]/5 rounded-lg border border-[#f5f4ef]/10 hover:border-[#bfff00]/30 hover:bg-[#f5f4ef]/10 transition-all group"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h2 className="text-xl font-semibold group-hover:text-[#bfff00] transition-colors">
+                      {route.label}
+                    </h2>
+                    {route.description && (
+                      <p className="text-[#f5f4ef]/60 mt-1 text-sm">
+                        {route.description}
+                      </p>
+                    )}
+                  </div>
+                  <span className="text-[#f5f4ef]/40 text-sm font-mono bg-[#080808] px-3 py-1 rounded border border-[#f5f4ef]/10">
+                    {route.path}
+                  </span>
                 </div>
-                <span className="text-gray-500 text-sm font-mono bg-gray-900 px-3 py-1 rounded">
-                  {route.path}
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
+              </Link>
+            ))}
+          </div>
 
-        <div className="mt-12 text-center">
-          <Link
-            href="/"
-            className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
-          >
-            ← Back to Home
-          </Link>
+          <div className="mt-12 text-center">
+            <Link
+              href="/"
+              className="inline-flex items-center text-[#bfff00] hover:text-white transition-colors"
+            >
+              ← Back to Home
+            </Link>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }

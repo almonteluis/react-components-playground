@@ -3,6 +3,8 @@ import { useState } from "react";
 import Question from "@/components/quiz/Question";
 import Results from "@/components/quiz/Results";
 import { quizQuestions } from "@/api/getQuestions";
+import Navigation from "@/components/Navigation";
+
 export default function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -30,25 +32,30 @@ export default function Quiz() {
   };
 
   return (
-    <div className="p-6 max-w-2xl mx-auto select-none">
-      <h1 className="text-3xl font-bold mb-8 text-center">
-        React Fundamentals Quiz
-      </h1>
+    <div className="min-h-screen bg-[#080808] text-[#f5f4ef]">
+      <Navigation />
+      <main className="pt-24 px-6 pb-16">
+        <div className="max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center">
+            React Fundamentals Quiz
+          </h1>
 
-      {!showResults ? (
-        <Question
-          question={quizQuestions[currentQuestion]}
-          onClick={handleAnswer}
-          currentQuestion={currentQuestion + 1}
-          totalQuestions={quizQuestions.length}
-        />
-      ) : (
-        <Results
-          score={score}
-          totalQuestions={quizQuestions.length}
-          onRestart={restartQuiz}
-        />
-      )}
+          {!showResults ? (
+            <Question
+              question={quizQuestions[currentQuestion]}
+              onClick={handleAnswer}
+              currentQuestion={currentQuestion + 1}
+              totalQuestions={quizQuestions.length}
+            />
+          ) : (
+            <Results
+              score={score}
+              totalQuestions={quizQuestions.length}
+              onRestart={restartQuiz}
+            />
+          )}
+        </div>
+      </main>
     </div>
   );
 }
