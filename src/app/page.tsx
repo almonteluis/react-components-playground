@@ -426,6 +426,16 @@ export default function Home() {
                 />
               </button>
             ))}
+            <Link
+              href="/routes"
+              className="relative group"
+              style={{ opacity: navOpacity || 0.6 }}
+            >
+              <span className="font-mono text-[11px] tracking-[0.2em] uppercase text-[#f5f4ef]/60 group-hover:text-[#bfff00] transition-colors duration-300">
+                ROUTES
+              </span>
+              <span className="absolute -bottom-2 left-0 h-[1px] bg-[#bfff00] w-0 group-hover:w-full transition-all duration-500" />
+            </Link>
           </div>
 
           <MagneticButton>
