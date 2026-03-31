@@ -1,4 +1,4 @@
-export default [
+const jobData = [
   {
     id: 1,
     position: "Senior Frontend Developer",
@@ -168,3 +168,5 @@ export default [
     },
   },
 ];
+
+export default jobData;

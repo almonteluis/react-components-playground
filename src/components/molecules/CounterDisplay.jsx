@@ -2,6 +2,12 @@ import React from "react";
 import { NumberDisplay } from "@/components/atoms/NumberDisplay";
 
 export const CounterDisplay = ({ count }) => {
+  /**
+   * @param {Object} props
+   * @param {number} props.count
+   * @returns {React.ReactNode}
+   */
+
   return (
     <div className="grid gap-3">
       <h3 className="text-center text-2xl font-bold">Counter Value:</h3>

@@ -2,22 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  * {
+    @apply border-[#f5f4eb]/10;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #2e2e2c;
-    --foreground: #f5f4ef;
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-[#0a0a0a] text-[#f5f4eb];
+    font-family: var(--font-jetbrains-mono), 'JetBrains Mono', 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Droid Sans Mono', 'Source Code Pro', monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scale-y-0 {
+    transform: scaleY(0);
+  }
+
+  .scale-y-100 {
+    transform: scaleY(1);
+  }
+
+  .origin-top {
+    transform-origin: top;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bfff00;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aadd00;
 }
 
 .counter-container {

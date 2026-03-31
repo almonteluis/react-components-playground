@@ -15,7 +15,7 @@ export default function Projects() {
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 I build projects from 0 to 1, turning ideas into reality. Take a
-                look at some of my favorite projects below.
+                look at some of my favorite projects below. Actually don't look!
               </p>
             </div>
           </div>

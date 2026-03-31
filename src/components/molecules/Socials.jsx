@@ -4,6 +4,11 @@ import {
   RiInstagramFill,
   RiTwitterXFill,
 } from "@remixicon/react";
+
+/**
+ * @returns {React.ReactNode}
+ */
+
 export default function Socials() {
   return (
     <div

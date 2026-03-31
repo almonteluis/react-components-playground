@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function ProfileCard() {
   function handleButton() {
-    console.log("test");
+    return true;
   }
   return (
     <article className="card flex flex-col gap-10 bg-white px-4 py-6 rounded-lg">
@@ -33,7 +33,7 @@ export default function ProfileCard() {
         </p>
       </section>
       <section className="flex flex-col gap-6 self-stretch card-footer">
-        <Button title="Contact me" onClick={handleButton} />
+        <Button onClick={handleButton}>Contact me</Button>
         <Socials />
       </section>
     </article>

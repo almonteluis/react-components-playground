@@ -1,6 +1,5 @@
 export default function Results({ score, totalQuestions, onRestart }) {
   const precentage = Math.round((score / totalQuestions) * 100);
-  console.log(precentage);
   return (
     <div className="text-center">
       <h1 className="text-2xl mb-4">Quiz Completed!</h1>
